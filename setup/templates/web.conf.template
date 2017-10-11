@@ -3,17 +3,21 @@
   "format": 1
 }{
   "port": DWPORT,
-  "enabled_plugins": [],
+  "enabled_plugins": [
+    "TotalTraffic", 
+    "ltConfig", 
+    "Stats"
+  ], 
   "pwd_sha1": "DWP",
   "theme": "gray",
   "show_sidebar": true,
-  "sidebar_show_zero": false,
+  "sidebar_show_zero": true,
   "pkey": "ssl/daemon.pkey",
   "https": false,
   "sessions": {},
   "base": "/",
   "pwd_salt": "DWSALT",
-  "show_session_speed": false,
+  "show_session_speed": true,
   "first_login": false,
   "cert": "ssl/daemon.cert",
   "session_timeout": 3600,
