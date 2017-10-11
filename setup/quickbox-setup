@@ -775,9 +775,8 @@ fi
   mkdir -p /home/${username}/.config/deluge/plugins
   if [[ ! -f /home/${username}/.config/deluge/plugins/ltConfig-0.2.5.0-py2.7.egg ]]; then
     cd /home/${username}/.config/deluge/plugins/
-    cp ${local_setup}templates/ltConfig-0.3.1-py2.7.egg /home/${username}/.config/plugins/ltConfig-0.3.1-py2.7.egg
-    cp /etc/QuickBox/setup/templates/Stats-0.3.2-py2.7.egg /home/${username}/.config/plugins/Stats-0.3.2-py2.7.egg
-    cp /etc/QuickBox/setup/templates/TotalTraffic-0.5-py2.7.egg /home/${username}/.config/plugins/TotalTraffic-0.5-py2.7.egg
+    cp /etc/QuickBox/setup/templates/Stats-0.3.2-py2.7.egg /home/${username}/.config/deluge/plugins/Stats-0.3.2-py2.7.egg
+    cp /etc/QuickBox/setup/templates/TotalTraffic-0.5-py2.7.egg /home/${username}/.config/deluge/plugins/TotalTraffic-0.5-py2.7.egg
   fi
   chmod 755 /home/${username}/.config
   chmod 755 /home/${username}/.config/deluge
