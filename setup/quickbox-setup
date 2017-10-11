@@ -775,10 +775,13 @@ fi
   mkdir -p /home/${username}/.config/deluge/plugins
   if [[ ! -f /home/${username}/.config/deluge/plugins/ltConfig-0.2.5.0-py2.7.egg ]]; then
     cd /home/${username}/.config/deluge/plugins/
-    wget -q https://github.com/ratanakvlun/deluge-ltconfig/releases/download/v0.2.5.0/ltConfig-0.2.5.0-py2.7.egg
+    cp ${local_setup}templates/ltConfig-0.3.1-py2.7.egg /home/${username}/.config/plugins/ltConfig-0.3.1-py2.7.egg
+    cp ${local_setup}templates/Stats-0.3.2-py2.7.egg /home/${username}/.config/plugins/Stats-0.3.2-py2.7.egg
+    cp ${local_setup}templates/TotalTraffic-0.5-py2.7.egg /home/${username}/.config/plugins/TotalTraffic-0.5-py2.7.egg
   fi
   chmod 755 /home/${username}/.config
   chmod 755 /home/${username}/.config/deluge
+  cp ${local_setup}templates/ltconfig.conf /home/${username}/.config/deluge/ltconfig.conf
   cp ${local_setup}templates/core.conf.template /home/${username}/.config/deluge/core.conf
   cp ${local_setup}templates/web.conf.template /home/${username}/.config/deluge/web.conf
   cp ${local_setup}templates/hostlist.conf.1.2.template /home/${username}/.config/deluge/hostlist.conf.1.2
