@@ -422,7 +422,7 @@ function _updates() {
 
   if [[ -e /etc/ssh/sshd_config ]]; then
     echo "Port 4747" /etc/ssh/sshd_config >> /dev/null 2>&1
-    sed -i 's/Port 22/Port 4747/g' /etc/ssh/sshd_config
+    #sed -i 's/Port 22/Port 4747/g' /etc/ssh/sshd_config
     #sed -i 's/SendEnv LANG LC_*/#SendEnv LANG LC_*/g' /etc/ssh/ssh_config
     #sed -i 's/AcceptEnv LANG LC_*/#AcceptEnv LANG LC_*/g' /etc/ssh/sshd_config
     service ssh restart >>"${OUTTO}" 2>&1
