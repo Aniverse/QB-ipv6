@@ -272,7 +272,7 @@ function _askrtorrent() {
 # ask deluge version (if wanted) (8.1)
 function _askdeluge() {
   echo -e "1) Deluge ${green}1.3.15 or newer${normal}"
-  echo -e "2) Deluge 1.3.13 with ${green}libtorrent 0.16.19 (stable)${normal}"
+  echo -e "2) Deluge ${green}1.3.13 with libtorrent 0.16.19 (OurBits & HDHome supported)${normal}"
   echo -e "3) Do not install Deluge"
   echo -ne "${bold}${yellow}What version of Deluge do you want?${normal} (Default ${green}2${normal}): "; read version
   case $version in
@@ -776,8 +776,8 @@ fi
   if [[ ! -f /home/${username}/.config/deluge/plugins/ltConfig-0.2.5.0-py2.7.egg ]]; then
     cd /home/${username}/.config/deluge/plugins/
     cp ${local_setup}templates/ltConfig-0.3.1-py2.7.egg /home/${username}/.config/plugins/ltConfig-0.3.1-py2.7.egg
-    cp ${local_setup}templates/Stats-0.3.2-py2.7.egg /home/${username}/.config/plugins/Stats-0.3.2-py2.7.egg
-    cp ${local_setup}templates/TotalTraffic-0.5-py2.7.egg /home/${username}/.config/plugins/TotalTraffic-0.5-py2.7.egg
+    cp /etc/QuickBox/setup/templates/Stats-0.3.2-py2.7.egg /home/${username}/.config/plugins/Stats-0.3.2-py2.7.egg
+    cp /etc/QuickBox/setup/templates/TotalTraffic-0.5-py2.7.egg /home/${username}/.config/plugins/TotalTraffic-0.5-py2.7.egg
   fi
   chmod 755 /home/${username}/.config
   chmod 755 /home/${username}/.config/deluge
@@ -787,7 +787,6 @@ fi
   cp ${local_setup}templates/hostlist.conf.1.2.template /home/${username}/.config/deluge/hostlist.conf.1.2
   sed -i "s/USERNAME/${username}/g" /home/${username}/.config/deluge/core.conf
   sed -i "s/DPORT/${DPORT}/g" /home/${username}/.config/deluge/core.conf
-  sed -i "s/XX/${ip}/g" /home/${username}/.config/deluge/core.conf
   sed -i "s/DWPORT/${DWPORT}/g" /home/${username}/.config/deluge/web.conf
   sed -i "s/DWSALT/${DWSALT}/g" /home/${username}/.config/deluge/web.conf
   sed -i "s/DWP/${DWP}/g" /home/${username}/.config/deluge/web.conf
