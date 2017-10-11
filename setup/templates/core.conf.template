@@ -19,7 +19,7 @@
   "geoip_db_location": "/usr/share/GeoIP/GeoIP.dat",
   "upnp": false,
   "utpex": true,
-  "max_active_downloading": 3,
+  "max_active_downloading": -1,
   "max_active_seeding": -1,
   "allow_remote": true,
   "outgoing_ports": [
@@ -29,7 +29,7 @@
   "enabled_plugins": [
     "ltConfig"
   ],
-  "max_half_open_connections": 50,
+  "max_half_open_connections": -1,
   "download_location": "/home/USERNAME/torrents/deluge",
   "compact_allocation": true,
   "max_upload_speed": -1.0,
@@ -46,7 +46,7 @@
   "auto_managed": true,
   "enc_level": 2,
   "copy_torrent_file": false,
-  "max_connections_per_second": 50,
+  "max_connections_per_second": -1,
   "listen_ports": [
     6881,
     6891
@@ -91,13 +91,13 @@
   "max_upload_slots_per_torrent": -1,
   "new_release_check": false,
   "enc_out_policy": 1,
-  "seed_time_ratio_limit": 7.0,
+  "seed_time_ratio_limit": -1.0,
   "remove_seed_at_ratio": false,
   "autoadd_location": "/home/USERNAME/dwatch/",
   "max_upload_slots_global": -1,
-  "seed_time_limit": 180,
+  "seed_time_limit": -1,
   "cache_size": 512,
-  "share_ratio_limit": 2.0,
+  "share_ratio_limit": -1.0,
   "random_port": true,
   "listen_interface": "XX"
 }
