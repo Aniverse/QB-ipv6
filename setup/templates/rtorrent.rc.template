@@ -1,5 +1,4 @@
 # -- START HERE --
-dht = auto
 directory.default.set = /home/USERNAME/torrents/rtorrent
 encoding.add = UTF-8
 encryption = allow_incoming,try_outgoing,enable_retry,require_RC4
@@ -22,4 +21,11 @@ throttle.min_peers.normal.set = 1
 throttle.min_peers.seed.set = -1
 trackers.use_udp.set = yes
 use_udp_trackers = yes
+
+dht.mode.set = disable
+network.max_open_files.set = 4096
+network.max_open_sockets.set = 1536
+network.http.max_open.set = 48
+network.send_buffer.size.set = 4M
+network.receive_buffer.size.set = 4M
 # -- END HERE --
