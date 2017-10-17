@@ -219,3 +219,12 @@ If your disk space widget is not showing the correct amount of space, run one of
 * If you're using a /home mounted partition then run: __fix-disk_widget_home__
 * If you're using a /(root) mounted partition then run: __fix-disk_widget_root__
 <br/>
+
+## 修改内容
+00. (相对现在的 QuickBox 官方版而言，因此TR/BBR/h5ai之类的就不写了)
+01. rTorrent 0.9.4/0.9.6 支持 ipv6 (efs)
+02. 可选择 Deluge 1.3.13 with libtorrent 0.16.19
+03. 选择从 repo 安装 Deluge 时，添加 Deluge PPA 以安装最新版本
+04. SSH 端口设置为 22
+05. Deluge 添加、更新了 ltconfig 0.3.1、Stats 0.3.2、TotalTraffic 0.5 插件，并默认启用
+06. 修改了一些 Deluge 和 rTorrent 的参数
