@@ -8,24 +8,36 @@ network.port_random.set = yes
 network.port_range.set = XXX-YYY
 network.scgi.open_port = localhost:XXX
 network.tos.set = throughput
-peer_exchange = yes
-pieces.hash.on_completion.set = no
 schedule = watch_directory,5,5,load.start=/home/USERNAME/rwatch/*.torrent
 session.path.set = /home/USERNAME/.sessions/
 throttle.global_down.max_rate.set = 0
 throttle.global_up.max_rate.set = 0
-throttle.max_peers.normal.set = 2000
+throttle.max_peers.normal.set = 5000
 throttle.max_peers.seed.set = -1
-throttle.max_uploads.global.set = 2000
+throttle.max_uploads.global.set = 5000
 throttle.min_peers.normal.set = 1
 throttle.min_peers.seed.set = -1
 trackers.use_udp.set = yes
 use_udp_trackers = yes
 
+min_peers = 1
+max_peers = 5000
+min_peers_seed = -1
+max_peers_seed = -1
+max_uploads = 5000
+download_rate = 0
+upload_rate = 0
+
 dht.mode.set = disable
 network.max_open_files.set = 4096
 network.max_open_sockets.set = 1536
 network.http.max_open.set = 48
-network.send_buffer.size.set = 4M
+network.send_buffer.size.set = 16M
 network.receive_buffer.size.set = 4M
+network.xmlrpc.size_limit.set = 4M
+
+pieces.hash.on_completion.set = no
+pieces.preload.type.set = 1
+pieces.preload.min_size.set = 262144
+pieces.preload.min_rate.set = 5120
 # -- END HERE --
