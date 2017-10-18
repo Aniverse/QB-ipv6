@@ -1,6 +1,9 @@
 [![QuickBox](https://github.com/QuickBox/quickbox_github_assets/blob/master/img/quickbox2.png "QuickBox")](https://quickbox.io)
 
 ### A Preview of Quick Box
+
+---
+
 ![QuickBox Preview - Smoked Theme](https://github.com/QuickBox/quickbox_github_assets/blob/master/img/quickbox_preview-theme_smoked.gif "QuickBox Preview - Smoked Theme")
 
 ---
@@ -137,11 +140,11 @@ If your disk space widget is not showing the correct amount of space, run one of
 <br/>
 
 ## 修改内容
-00. (相对现在的 QuickBox 官方版而言，因此TR/BBR/h5ai之类的就不写了)
+00. (相对现在的 QuickBox 官方版而言，因此 efs 加入的 Tr/bbr/h5ai 之类的就不写了)
 01. rTorrent 0.9.4/0.9.6 支持 ipv6 (by efs)
 02. Deluge 的安装选项改为 Deluge 1.3.15 或者更新的稳定版、Deluge 1.3.13 with libtorrent 0.16.19
-03. 选择从 repo 安装 Deluge 时，添加 Deluge PPA 以安装最新版本
-04. SSH 端口设置为 22
-05. Deluge 添加、更新了 ltconfig 0.3.1、Stats 0.3.2、TotalTraffic 0.5 插件，并默认启用
-06. 修改了一些 Deluge 和 rTorrent 的参数
-07. 修改了一些选项的默认值（如quota=no, block public trackers=no）
+03. Deluge 添加、更新了 ltconfig 0.3.1、Stats 0.3.2、TotalTraffic 0.5 插件，并默认启用
+04. 修改了一些 Deluge 和 rTorrent 的参数
+05. SSH 端口设置为 22
+06. 去掉了询问是否10G盒子的问题
+07. 修改了一些选项的默认值（如 quota=no, block public trackers=no, tr=no, bbr=no, rt=0.9.6, de=1.3.13 ）
