@@ -69,6 +69,11 @@ autotools, cpuload, quotaspace, erasedata, extratio, extsearch, feeds, filedrop,
 * Colorful Ratios: Customized to match QuickBox Theme
 * __rutorrentMobile__: Mobile version of ruTorrent - seriously - toss TransDroid and the pain that it is... this is a new essential plugin (IMO)
 
+## Deluge plugins
+* ltconfig
+* TotalTraffic
+* Stats
+
 ## Before installation
 You need to have a Fresh "blank" server installation.
 After that access your box using a SSH client, like PuTTY.
@@ -82,34 +87,12 @@ After that access your box using a SSH client, like PuTTY.
 
 ---
 
-### Ubuntu 15.10, 16.04 & ~~16.10 || Debian 8~~
 
-**Run the following command to grab our latest stable release ...**
 ```
 apt-get -yqq update; apt-get -yqq upgrade; apt-get -yqq install git lsb-release; \
-git clone https://github.com/amefs/QB /etc/QuickBox &&
+git clone https://github.com/Aniverse/QB-ipv6 /etc/QuickBox &&
 bash /etc/QuickBox/setup/quickbox-setup
 ```
-
-
-## Want to run in development mode?
-
-**Run the following command to grab current development repos ...**
-```
-mkdir /install/ && touch /install/.developer.lock; \
-apt-get -yqq update; apt-get -yqq upgrade; apt-get -yqq install git lsb-release; \
-git clone --branch "development" https://github.com/QuickBox/QB /etc/QuickBox &&
-bash /etc/QuickBox/setup/quickbox-setup
-```
-
-## Already have QuickBox installed and want to switch over to development?
-
-**EASY! Run the following command to grab current development repos ...**
-```
-mkdir /install/ && touch /install/.developer.lock \
-sudo box upgrade
-```
-
 
 ---
 
