@@ -1,89 +1,5 @@
 [![QuickBox](https://github.com/QuickBox/quickbox_github_assets/blob/master/img/quickbox2.png "QuickBox")](https://quickbox.io)
 
-### Join us on our Chat Server at [chat.quickbox.io](https://chat.quickbox.io/) !!!
-
-
-## To make use of the GitHub repo (all future updates posted here!)
->This step is only required for users who are coming off of our self-hosted GitLab repositories. If you are installing from fresh, please see [How to install](#how-to-install)
-
-### [1]:
-login to your server via ssh. Gain root access with `sudo su` followed up with `cd` to place you in your /root directory. Once in your /root directory, type the following to remove your current local QuickBox repositories.
-```
-rm -rf ~/QuickBox
-```
-
----
-
-### If you are already located on the GitHub repo as of v2.4.9, run the following to easily update to the new v2.5.+ QuickBox/QB repo:
-```
-rm -rf /etc/QuickBox; \
-git clone https://github.com/QuickBox/QB /etc/QuickBox; \
-wget -O /usr/local/bin/quickbox/system/updateQuickBox https://raw.githubusercontent.com/QuickBox/QB/master/packages/system/updateQuickBox; \
-dos2unix $(find /usr/local/bin/quickbox -type f) && chmod +x $(find /usr/local/bin/quickbox -type f); \
-updateQuickBox
-```
-
-### If you have received the following error:
->`find: ‘/home/*/.config/deluge’: No such file or directory`
-This simply means you do not have Deluge installed, there is no further action for you take.
-
----
-
-> #### NOTE:<br>The continuation below explains the above all-in-one code, minus the removal of the recent locations at `/root/QuickBox`
-
-### [2]:
-grab the current/future QuickBox repository with the following:
-```
-git clone https://github.com/QuickBox/QB /etc/QuickBox
-```
-
->If you receive an error `/etc/QuickBox already exists` please perform an `rm -rf /etc/QuickBox`. You can then run the `git clone` command above to proceed.
-
-### [3]:
-update your current update function by doing the following:
-```
-local_packages=/etc/QuickBox/packages/
-rm -rf /usr/local/bin/quickbox
-cp -r ${local_packages}/. /usr/local/bin/quickbox
-dos2unix $(find /usr/local/bin/quickbox -type f)
-chmod +x $(find /usr/local/bin/quickbox -type f)
-cp -f /usr/local/bin/quickbox/system/reload /usr/bin/reload
-```
-
-### [4]:
-run the upgrade script to match any recent changes and to get you on your way:
-```
-updateQuickBox
-```
-
-
----
-
-## Script status
-
-[![Version 2.5.1-production](https://img.shields.io/badge/version-2.5.1-674172.svg?style=flat-square)](https://quickbox.io/readme-md/) [![GNU v3.0 License](https://img.shields.io/badge/license-GNU%20v3.0%20License-blue.svg?style=flat-square)](https://quickbox.io/readme-md/)
-
-#### Ubuntu Builds
- [![Ubuntu 15.10 Passing](https://img.shields.io/badge/Ubuntu%2015.10-passing-brightgreen.svg?style=flat-square)](https://quickbox.io/readme-md/) [![Ubuntu 16.04 Passing](https://img.shields.io/badge/Ubuntu%2016.04-passing-brightgreen.svg?style=flat-square)](https://quickbox.io/readme-md/) [![Ubuntu 16.10 Failing](https://img.shields.io/badge/Ubuntu%2016.10-failing-brightred.svg?style=flat-square)](https://quickbox.io/readme-md/)
-
-#### Debian Builds -- SUPPORT DISCONTINUED [USE Ubuntu 16.04]
-[![Debian 8 Null](https://img.shields.io/badge/Debain%208-null-black.svg?style=flat-square)](https://quickbox.io/readme-md/)
-
----
-
-### Quick Advisory Notice(s) on QuickBox
-
->### :rotating_light: OVH DEFAULT KERNEL NOTICE!<br>
-grsec is built into OVH's custom kernel and it absolutely wrecks havoc when using these panels where we depend on the ability for one user (www-data) to see the processes of another running user ($username).
-<br>This can be seen clearly by using a task manager such as h/top.
-<br>With grsec enabled you can only see the processes owned by your user unless you run htop as root. As such, it is highly recommended to use the stock kernel for your distribution or at the very least installing an OVH kernel that is not compiled with grsec
-<br>If you are using So You Start (SYS) as a host, you should opt to use the distribution kernel. You will see this as a check box option when installing your server. Otherwise, QuickBox will handle this for you on install.
-
-
-
----
-> Please understand that we do not want to push this project as a means to supply a commercially used product, ie; seedbox provider - so keep this in mind - only if you wish to sale slots on your server. Though it is very multi-user friendly... it is also not free of it's faults due to it's high amount of capabilities and being publicly available. This is a community based project that is a measure of goodwill to be given to such an outspoken and freethinking community.
-
 ### A Preview of Quick Box
 ![QuickBox Preview - Smoked Theme](https://github.com/QuickBox/quickbox_github_assets/blob/master/img/quickbox_preview-theme_smoked.gif "QuickBox Preview - Smoked Theme")
 
@@ -222,9 +138,10 @@ If your disk space widget is not showing the correct amount of space, run one of
 
 ## 修改内容
 00. (相对现在的 QuickBox 官方版而言，因此TR/BBR/h5ai之类的就不写了)
-01. rTorrent 0.9.4/0.9.6 支持 ipv6 (efs)
-02. 可选择 Deluge 1.3.13 with libtorrent 0.16.19
+01. rTorrent 0.9.4/0.9.6 支持 ipv6 (by efs)
+02. Deluge 的安装选项改为 Deluge 1.3.15 或者更新的稳定版、Deluge 1.3.13 with libtorrent 0.16.19
 03. 选择从 repo 安装 Deluge 时，添加 Deluge PPA 以安装最新版本
 04. SSH 端口设置为 22
 05. Deluge 添加、更新了 ltconfig 0.3.1、Stats 0.3.2、TotalTraffic 0.5 插件，并默认启用
 06. 修改了一些 Deluge 和 rTorrent 的参数
+07. 修改了一些选项的默认值（如quota=no, block public trackers=no）
