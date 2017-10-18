@@ -1292,17 +1292,17 @@ function _finished() {
   echo;echo;echo
   echo '################################################################################################'
   echo "#   Seedbox can be found at https://${username}:${passwd}@${ip} "
-  echo "#   ${cyan}(Also works for FTP:5757/SSH:4747)${normal}"
+  echo "#   ${cyan}(Also works for FTP:5757/SSH:22)${normal}"
   echo "#   If you need to restart rtorrent/irssi, you can type 'reload'"
-  echo "#   https://${username}:${passwd}@${ip} (Also works for FTP:5757/SSH:4747)" > ${username}.info
+  echo "#   https://${username}:${passwd}@${ip} (Also works for FTP:5757/SSH:22)" > ${username}.info
   echo "#   Reloading: ${green}sshd${normal}, ${green}apache${normal}, ${green}memcached${normal}, ${green}php7.0${normal}, ${green}vsftpd${normal} and ${green}fail2ban${normal}"
   echo '################################################################################################'
   echo
 
 cat >/root/information.info<<EOF
-  Seedbox can be found at https://${username}:${passwd}@${ip} (Also works for FTP:5757/SSH:4747)
+  Seedbox can be found at https://${username}:${passwd}@${ip} (Also works for FTP:5757/SSH:22)
   If you need to restart rtorrent/irssi, you can type 'reload'
-  https://${username}:${passwd}@${ip} (Also works for FTP:5757/SSH:4747)
+  https://${username}:${passwd}@${ip} (Also works for FTP:5757/SSH:22)
 EOF
   rm -rf "$0" >>"${OUTTO}" 2>&1
     for i in ssh apache2 php7.0-fpm vsftpd fail2ban quota memcached cron; do
