@@ -24,12 +24,14 @@ This script has the following features
 * mktorrent
 * pureftp - vsftp (CuteFTP multi-segmented download friendly)
 * __ruTorrent 3.7__ + official plugins
-* __rTorrent 0.9.6 + libTorrrent 0.13.6__
+* __rTorrent 0.9.4 + libTorrrent 0.13.4__ (with ipv6 support)
 * SSH Server (for SSH terminal and sFTP connections)
 * HTTPS - Web Console
+* __h5ai__ (a modern file indexer)
 
 ## Optional software
 * BTSync
+* __BBR (Used for Congestion Control)__
 * CouchPotato
 * ConfigServer Firewall
 * __Deluge (Web-client and thin-client)__
@@ -52,6 +54,7 @@ This script has the following features
 * Sonarr
 * Subsonic
 * Syncthing
+* __Transmission__
 * X2Go - Remote Desktop
 * ZNC
 * .. more to come (or how about that feature request?)
@@ -67,12 +70,12 @@ autotools, cpuload, quotaspace, erasedata, extratio, extsearch, feeds, filedrop,
 * Logoff
 * Theme: QuickBox ``Dark rutorrent skin``
 * Colorful Ratios: Customized to match QuickBox Theme
-* __rutorrentMobile__: Mobile version of ruTorrent - seriously - toss TransDroid and the pain that it is... this is a new essential plugin (IMO)
+* __rutorrentMobile__: Mobile version of ruTorrent
 
 ## Deluge plugins
 * ltconfig
-* TotalTraffic
-* Stats
+* Total Traffic (GtkUI only)
+* Stats (GtkUI only)
 
 ## Before installation
 You need to have a Fresh "blank" server installation.
@@ -104,7 +107,6 @@ After installing you will have access to the following commands to be used direc
 * __clean_mem__ - flushes servers physical memory cache (helps avoid swap overflow)
 * __createSeedboxUser__ - creates a shelled seedbox user
 * __deleteSeedboxUser__ - deletes a created seedbox user and their directories
-<sup>**This is permanent, current data will be deleted - you can create them again at any time**</sup>
 * __reload__ - restarts your seedbox services, i.e; rtorrent & irssi
 * __removepackage-cron__ - upgrades your system to make use of systemd
 * __setdisk__ - set your disk quota for any given user
@@ -123,7 +125,7 @@ If your disk space widget is not showing the correct amount of space, run one of
 <br/>
 
 ## 修改内容
-00. (相对现在的 QuickBox 官方版而言，因此 efs 加入的 Tr/bbr/h5ai 之类的就不写了)
+00. (相对现在的 QuickBox 官方版而言，因此 efs 加入的 transmission/bbr/h5ai 之类的就不写了)
 01. rTorrent 0.9.4/0.9.6 支持 ipv6 (by efs)
 02. Deluge 的安装选项改为 Deluge 1.3.15 或者更新的稳定版、Deluge 1.3.13 with libtorrent 0.16.19
 03. Deluge 添加、更新了 ltconfig 0.3.1、Stats 0.3.2、TotalTraffic 0.5 插件，并默认启用
